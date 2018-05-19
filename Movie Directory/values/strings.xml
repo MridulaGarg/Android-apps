@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Movie Directory</string>
+    <string name="action_settings">Settings</string>
+    <string name="search_title">search</string>
+    <string name="search_text">New search Term</string>
+    <string name="search_hint">E.g: Batman</string>
+    <string name="submit_text">Submit</string>
+</resources>
