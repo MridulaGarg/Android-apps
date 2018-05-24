@@ -14,7 +14,6 @@ import Model.*;
 
 import Data.DatabaseHandler;
 
-
 public class MainActivity extends AppCompatActivity {
     private EditText foodName, foodCals;
     private Button submitButton;
@@ -25,7 +24,6 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-
         dba = new DatabaseHandler(MainActivity.this);
 
         foodName = (EditText) findViewById(R.id.foodEditText);
@@ -35,9 +33,7 @@ public class MainActivity extends AppCompatActivity {
         submitButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
                 saveDataToDB();
-
             }
         });
     }
@@ -61,7 +57,6 @@ public class MainActivity extends AppCompatActivity {
 
             dba.addFood(food);
             dba.close();
-
 
             //clear the form
             foodName.setText("");
