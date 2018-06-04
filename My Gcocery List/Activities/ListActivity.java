@@ -128,6 +128,7 @@ public class ListActivity extends AppCompatActivity {
                 dialog.dismiss();
                 //start a new activity
                 startActivity(new Intent(ListActivity.this, ListActivity.class));
+                finish();
             }
         }, 1300); //1.3 second
     }
