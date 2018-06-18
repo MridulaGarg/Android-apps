@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="5dp">
+
+    <ImageView
+        android:id="@+id/postImageDet"
+        android:layout_width="375dp"
+        android:layout_height="300dp"
+        android:adjustViewBounds="true"
+        android:cropToPadding="false"
+        android:padding="10dp"
+        android:scaleType="centerCrop"
+        android:src="@color/colorAccent" />
+
+    <TextView
+        android:id="@+id/postTitleDet"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Title"
+        android:padding="5dp"
+        android:textStyle="bold"
+        android:textSize="20sp" />
+
+    <TextView
+        android:id="@+id/postDescDet"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Description"
+        android:padding="5dp"
+        android:textSize="16sp" />
+
+    <TextView
+        android:id="@+id/postDateDet"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Created on"
+        android:padding="5dp"
+        android:textSize="18sp"
+        android:textStyle="italic" />
+
+</LinearLayout>
