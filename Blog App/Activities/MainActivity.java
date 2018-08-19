@@ -14,6 +14,7 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
+import android.app.ProgressDialog;
 
 import com.google.android.gms.appinvite.AppInviteInvitation;
 import com.google.android.gms.common.ConnectionResult;
@@ -40,13 +41,19 @@ public class MainActivity extends AppCompatActivity{
     private Button createActButton;
     private EditText emailField;
     private EditText passwordField;
-
+    
+    //Sheetal Kumar Changes..
+    private ProgressDialog progressDialog;
+    //ends
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
         mAuth = FirebaseAuth.getInstance();
+        
+        progressDialog = new ProgressDialog(this);
+        
 
         loginButton = (Button) findViewById(R.id.loginButtonEt);
         createActButton = (Button) findViewById(R.id.createActButton);
@@ -104,7 +111,10 @@ public class MainActivity extends AppCompatActivity{
 
                         if (task.isSuccessful()) {
                             //Yay!! We're in!
-                            Toast.makeText(MainActivity.this, "Signed in", Toast.LENGTH_LONG)
+                             progressDialog.setTitle("Bloc App");
+                             progressDialog.setMessage(" Signing In, Please wait..");
+                             progressDialog.show();
+                             Toast.makeText(MainActivity.this, "Signed in", Toast.LENGTH_LONG)
                                     .show();
 
                             startActivity(new Intent(MainActivity.this, PostListActivity.class));
