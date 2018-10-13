@@ -28,6 +28,7 @@ public class MainActivity extends AppCompatActivity {
     public boolean onTouchEvent(MotionEvent event) {
 
         //batAnimation.start();
+        // please add recyclerView animation code or recyclerView touch listner details if possible.
 
         Handler mHandler = new Handler();
         mHandler.postDelayed(new Runnable() {
