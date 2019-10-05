@@ -20,8 +20,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         batImage = (ImageView) findViewById(R.id.batID);
-       // batImage.setBackgroundResource(R.drawable.bat_anim);
-        //batAnimation = (AnimationDrawable) batImage.getBackground();
+      
     }
 
     @Override
@@ -40,7 +39,7 @@ public class MainActivity extends AppCompatActivity {
                 //stop the animation
                 //batAnimation.stop();
             }
-        }, 50);  //miliseconds
+        }, 90);  //miliseconds
 
         return super.onTouchEvent(event);
     }
